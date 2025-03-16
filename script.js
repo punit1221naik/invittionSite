@@ -91,9 +91,12 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
+// RSVP Form Toggle
 function toggleRSVP() {
     const form = document.getElementById('rsvpForm');
     form.classList.toggle('active');
+
+    // Create confetti effect when opening the form
     if (form.classList.contains('active')) {
         createConfetti(20);
     }
@@ -143,6 +146,8 @@ function getRandomColor() {
 let currentTheme = 0;
 const themes = [
     'url("homeWithbaby1.jpg")',
+    'url("homeWithImage2.jpg")',
+    'url("homeWithImage3.jpg")',
     'linear-gradient(to right, #3498db, #8e44ad)',
     'linear-gradient(to right, #ff7e5f, #feb47b)',
     'linear-gradient(to right, #56ab2f, #a8e063)'
