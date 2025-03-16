@@ -1,22 +1,22 @@
 const accordionData = [
     {
-        heading: "Who is inviting you?",
-        description: "Punit & Megha are inviting you to celebrate two special milestones in their life journey together."
+        heading: "What",
+        description: "A double celebration! First, the warming of our new nest, and second the naming ceremony of our little son."
     },
     {
-        heading: "What are we celebrating?",
-        description: "A double celebration! First, the warming of our new nest, and second, the official naming ceremony of our precious little son."
+        heading: "Who",
+        description: "Punit & Megha! we are inviting you to celebrate two special milestones in our life journey together."
     },
     {
-        heading: "When is the celebration?",
+        heading: "When",
         description: "Thursday, 27th March 2025 -(11am) - Save the date for this joyous occasion!"
     },
     {
-        heading: "Where is the venue?",
-        description: "Our new home: Bhavani Hessoniate, Room no 301, 3rd floor, Next to Vidyaratna Enclave, Vidyaratna Nagar, Manipal, Karnataka 576104"
+        heading: "Where",
+        description: "Our new home: Bhavani Hessonite, Room no 301, 3rd floor, Next to Vidyaratna Enclave, Vidyaratna Nagar, Manipal, Karnataka 576104"
     },
     {
-        heading: "Why should you come?",
+        heading: "Why",
         description: "Because your presence will make our celebration complete! Plus, who wouldn't want to be among the first to know our son's name and bless our new home? And yes, there will be delicious food!"
     }
 ];
