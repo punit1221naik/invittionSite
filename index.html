@@ -1,156 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Housewarming & Naming Ceremony</title>
-    <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-image: url('homeWithbaby1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    
-    .card {
-      max-width: 80%;
-      padding: 30px;
-      margin: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .card-content {
-      background-color: rgba(255, 255, 255, 0); /* More transparent background */
-      padding: 30px;
-      border-radius: 8px;
-      position: relative;
-      z-index: 1;
-      color: #333;
-      text-shadow: 0 0 2px #fff; /* Text shadow to help readability */
-    }
-    
-    .card h1 {
-      font-family: 'Times New Roman', serif;
-      color: #1a5276; /* Deep sea blue */
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px white; /* Enhanced text shadow for header */
-    }
-    
-    .card img {
-      max-width: 150px;
-      margin-bottom: 20px;
-      border-radius: 50%; /* Optional: circular image */
-      border: 3px solid #5dade2; /* Light blue border */
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* White glow around image */
-    }
-    
-    .card p {
-      line-height: 1.6;
-      margin-bottom: 15px;
-      font-weight: 500; /* Slightly bolder text for better readability */
-    }
-    
-    .card .details {
-      font-weight: bold;
-      margin-top: 20px;
-      background-color: rgba(255, 255, 255, 0.6); /* Slightly more visible background for details */
-      padding: 10px;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    
-    .card .rsvp {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-    
-    .card .names {
-      font-style: italic;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-    
-    .map-section {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .location-link {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px;
-      background-color: rgba(26, 82, 118, 0.8); /* Semi-transparent blue */
-      color: white;
-      text-decoration: none;
-      border-radius: 20px;
-      font-size: 14px;
-      transition: background-color 0.3s;
-      font-weight: bold;
-      border: 2px solid #1a5276;
-    }
-    
-    .location-link:hover {
-      background-color: rgba(41, 128, 185, 0.9);
-    }
-    
-    .location-link svg {
-      width: 16px;
-      height: 16px;
-      margin-right: 8px;
-    }
-
-    .ceremony-title {
-  font-size: 24px; /* Larger font size */
-  font-weight: bold;
-  color: #1a5276; /* Deep sea blue */
-  margin: 15px 0;
-  text-shadow: 1px 1px 3px white; /* Enhanced shadow for readability */
-}
-
-  </style>
+    <title>Housewarming & Naming Ceremony</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+    <div class="wrapper">
+        <div class="countdown_wrapper">
+            <div>
+                <button class="music-control" onclick="toggleMusic()">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+                    </svg>
+                </button>
+                <audio id="bgMusic" loop>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="countdown_box">
+                <div id="countdown" class="countdown">Loading countdown...</div>
+                <h1 class="heartbeat">Double the Joy, Double the Fun!</h1>
+            </div>
+            <div>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                        <path
+                            d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="content__wrapper">
+            <div class="card" style="width: 80%;">
+                <div class="card-content">
+                    <div id="accordion-container">
+                    </div>
+                    <div class="rsvp">
+                        Kindly reach out<br>
+                        <a href="tel:9108231918">9108231918</a>, <a href="tel:8147068760">8147068760</a> for directions
+                        if
+                        needed.
+                    </div>
+                    <div class="map-section">
+                        <a href="https://www.google.com/maps/search/Bhavani+Hessoniate,+Vidyaratna+Nagar,+Manipal,+Karnataka+576104"
+                            target="_blank" class="location-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Find Location on Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="card">
-  <div class="card-content">
-    <h1>WDouble the Joy, Double the Fun!
-    </h1>
-    <p class="ceremony-title">The Housewarming & <br>Naming Ceremony of our precious son</p>
-    <p class="details">
-      On Thursday, 27th March 2025<br>
-      <br>
-      Bhavani Hessoniate, Room no 301, 3rd floor.<br>
-      Next to Vidyaratna Enclave,<br>
-      Vidyaratna Nagar, Manipal, Karnataka 576104
-    </p>
-    <div class="rsvp">
-      Kindly reach out<br>
-      9108231918, 8147068760 for directions if needed.
     </div>
-    <p class="names">With Warm Regards,<br> Punit & Megha</p>
-    
-    <!-- Map link section inside the card -->
-    <div class="map-section">
-      <a href="https://www.google.com/maps/search/Bhavani+Hessoniate,+Vidyaratna+Nagar,+Manipal,+Karnataka+576104" target="_blank" class="location-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-          <circle cx="12" cy="10" r="3"></circle>
-        </svg>
-        Find Location on Google Maps
-      </a>
-    </div>
-  </div>
-</div>
-
+    <script src="./script.js"> </script>
 </body>
+
 </html>
