@@ -226,3 +226,17 @@ window.onload = function () {
         }, index * 1000);
     });
 };
+
+// Add this to your script.js file
+document.addEventListener('DOMContentLoaded', function() {
+    // Get both map buttons (desktop and mobile)
+    const mapButtons = document.querySelectorAll('.location-btn');
+    
+    // Add click event listener to each button
+    mapButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Open Google Maps with the location
+            window.open('https://www.google.com/maps/search/Bhavani+Hessonite,+Vidyaratna+Nagar,+Manipal,+Karnataka+576104', '_blank');
+        });
+    });
+});

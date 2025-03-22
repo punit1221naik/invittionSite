@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
     margin: 0;
     background-image: url('homeWithbaby1.jpg');
@@ -38,6 +38,7 @@ body {
     overflow: hidden;
     margin-top: 0px;
     padding-top: 0px;
+    width: 80%;
 }
 
 .card:hover {
@@ -91,8 +92,9 @@ body {
     background-color: rgba(26, 82, 118, 0.8);
     color: white;
     text-decoration: none;
-    border-radius: 20px;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 15px;
     transition: all 0.3s ease;
     font-weight: bold;
     border: 2px solid #1a5276;
@@ -281,5 +283,59 @@ body {
     text-align: left;
     box-shadow: 0 4px 8px rgba(173, 170, 170, 0.1);
 }
+.location-btn {
+    display: flex;
+    align-items: center;
+    background-color: rgba(26, 82, 118, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-@media only screen and (max-width: 600px) {}
+.location-btn .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.location-btn:hover {
+    background-color: rgba(26, 82, 118, 0.8);
+}
+.map-section--mobile {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+    .card-content {
+        padding: 0px;
+    }
+    .card p {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    .countdown {
+        font-size: 10px;
+
+    }
+    .heartbeat {
+        font-size: 20px;
+    }
+    .accordion {
+        font-size: 20px;
+    }
+    .map-section--mobile {
+
+        display: flex;
+        justify-content: center;
+    }
+    .map-section {
+        display: none;
+    }
+}
