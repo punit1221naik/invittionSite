@@ -72,7 +72,7 @@ function createAccordions(accordionData, targetSelector) {
 
 createAccordions(accordionData, '#accordion-container');
 function updateCountdown() {
-    const eventDate = new Date('March 27, 2025 00:00:00').getTime();
+    const eventDate = new Date('March 27, 2025 11:00:00').getTime();
     const now = new Date().getTime();
     const timeLeft = eventDate - now;
 
